@@ -19,7 +19,7 @@ jobs:
       - name: Run cmake
         working-directory: android
         run: |
-          cmake -a x64 .
+          cmake -A x64 .
           make
       - name: Upload artifact
         if: success()
