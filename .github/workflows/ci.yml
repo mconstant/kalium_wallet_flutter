@@ -14,12 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@master
         with:
-          repository: appditto/flutter_nano_ffi
+          repository: mconstant/flutter_nano_ffi
           ref: refs/heads/master
       - name: Run cmake
         working-directory: android
         run: |
-          cmake -A x86_64 .
+          cmake .
           make
       - name: Upload artifact
         if: success()
