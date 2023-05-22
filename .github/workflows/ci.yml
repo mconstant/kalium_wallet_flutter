@@ -19,7 +19,7 @@ jobs:
       - name: Run cmake
         working-directory: android
         run: |
-          cmake -G Xcode -A x86_64 .
+          CMAKE_OSX_ARCHITECTURES="x86_64" cmake -G Xcode .
           make
       - name: Upload artifact
         if: success()
